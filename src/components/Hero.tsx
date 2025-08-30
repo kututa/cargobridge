@@ -11,11 +11,11 @@ const Hero: React.FC<HeroProps> = ({ onRoleSelect }) => {
 
   // ✅ Images served from public/images/
   const backgroundImages = [
-    'public/images/transport-logistics-products.jpg',
-    'public/images/shipping-container-being-loaded-onto-truck-port.jpg',
-    'public/images/white-semi-trailer-truck-port.jpg',
-    'public/images/shipping-container-packed-with-cardboard-boxes.jpg',
-  ];
+  '/images/transport-logistics-products.jpg',
+  '/images/shipping-container-being-loaded-onto-truck-port.jpg',
+  '/images/white-semi-trailer-truck-port.jpg',
+  '/images/shipping-container-packed-with-cardboard-boxes.jpg',
+];
 
   useEffect(() => {
     const timer = setInterval(() => {
