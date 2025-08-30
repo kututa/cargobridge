@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = ({ onRoleSelect }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const backgroundImages = [
-    'src/images/semi-truck-port-sunset.jpg',
+    'src/images/semi-truck-highway-sunset.jpg',
     'src/images/shipping-container-being-loaded-onto-truck-port.jpg',
     'src/images/truck-shipping-port.jpg',
     'src/images/semi-truck-highway-sunset.jpg',
