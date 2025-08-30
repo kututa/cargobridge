@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Target, Route, AlertTriangle } from 'lucide-react';
 
-import aboutUsImage from '../images/aboutUsImage.jpg';
+import aboutUsImage from '/images/aboutUsImage.jpg';
 
 const AboutUs: React.FC = () => {
   const [activeTab, setActiveTab] = useState('about');

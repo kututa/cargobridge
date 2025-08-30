@@ -8,12 +8,13 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onRoleSelect }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
+  // ✅ Images served from public/images/
   const backgroundImages = [
-    'src/images/semi-truck-highway-sunset.jpg',
-    'src/images/shipping-container-being-loaded-onto-truck-port.jpg',
-    'src/images/truck-shipping-port.jpg',
-    'src/images/semi-truck-highway-sunset.jpg',
+    'public/images/transport-logistics-products.jpg',
+    'public/images/shipping-container-being-loaded-onto-truck-port.jpg',
+    'public/images/white-semi-trailer-truck-port.jpg',
+    'public/images/shipping-container-packed-with-cardboard-boxes.jpg',
   ];
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ onRoleSelect }) => {
       setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [backgroundImages.length]);
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -52,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({ onRoleSelect }) => {
           <br />
           <span className="text-blue-500">Cargo & Carriers</span>
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({ onRoleSelect }) => {
             <span>I Have Goods</span>
             <ArrowRight className="h-5 w-5" />
           </motion.button>
-          
+
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
